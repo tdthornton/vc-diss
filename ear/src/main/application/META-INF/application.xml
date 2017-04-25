@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_5.xsd" version="5">
+  <display-name>ear</display-name>
+  <module>
+    <web>
+      <web-uri>stats-out-1.0.war</web-uri>
+      <context-root>/stats-out</context-root>
+    </web>
+  </module>
+  <module>
+    <web>
+      <web-uri>stats-in-1.0.war</web-uri>
+      <context-root>/stats-in</context-root>
+    </web>
+  </module>
+  <module>
+    <web>
+      <web-uri>work-out-1.0.war</web-uri>
+      <context-root>/work-out</context-root>
+    </web>
+  </module>
+  <module>
+    <web>
+      <web-uri>results-in-1.0.war</web-uri>
+      <context-root>/results-in</context-root>
+    </web>
+  </module>
+  <module>
+    <web>
+      <web-uri>ops-1.0.war</web-uri>
+      <context-root>/ops</context-root>
+    </web>
+  </module>
+  <library-directory>lib</library-directory>
+</application>

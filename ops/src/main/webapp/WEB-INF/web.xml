@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <servlet>
+        <servlet-name>auth</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.AuthServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>auth</servlet-name>
+        <url-pattern>/auth</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>makeinputs</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.adminhelpers.MakeInputsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>makeinputs</servlet-name>
+        <url-pattern>/makeinputs</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>clearinputs</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.adminhelpers.ClearInputs</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>clearinputs</servlet-name>
+        <url-pattern>/clearinputs</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>toggleuserstatus</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.ToggleUserStatusServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>toggleuserstatus</servlet-name>
+        <url-pattern>/toggleuserstatus</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>clearexpired</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.CronServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>clearexpired</servlet-name>
+        <url-pattern>/clearexpired</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>totalcredits</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.TotalCreditsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>totalcredits</servlet-name>
+        <url-pattern>/totalcredits</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>verifyEmail</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.ConfirmEmailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>verifyEmail</servlet-name>
+        <url-pattern>/verifyEmail</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>resetpassword</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.ResetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>resetpassword</servlet-name>
+        <url-pattern>/resetpassword</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>newpassword</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.NewPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>newpassword</servlet-name>
+        <url-pattern>/newpassword</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteaccount</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.DeleteUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteaccount</servlet-name>
+        <url-pattern>/deleteaccount</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>updatecode</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.UpdateCodeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updatecode</servlet-name>
+        <url-pattern>/updatecode</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>uploadinputs</servlet-name>
+        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.UploadInputsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>uploadinputs</servlet-name>
+        <url-pattern>/uploadinputs</url-pattern>
+    </servlet-mapping>
+
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>everything</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+</web-app>
+

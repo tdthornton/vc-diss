@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+    <cron>
+        <url>/clearexpired</url>
+        <description>daily summary job</description>
+        <schedule>every day 00:00</schedule>
+        <target>ops</target>
+    </cron>
+    <cron>
+        <url>/totalcredits</url>
+        <description>Give stats credits to user totals</description>
+        <schedule>every monday 00:00</schedule>
+        <target>ops</target>
+    </cron>
+</cronentries>

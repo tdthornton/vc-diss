@@ -1,0 +1,11 @@
+<queue-entries>
+    <queue>
+        <name>default</name>
+        <rate>2/m</rate>
+    </queue>
+
+<queue>
+    <name>dq</name>
+    <rate>2/m</rate>
+</queue>
+</queue-entries>

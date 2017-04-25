@@ -1,0 +1,46 @@
+body {
+    font-family: Verdana, Helvetica, sans-serif;
+    background-color: #e7e7e7;
+}
+
+.pinsk {
+    background-color: white;
+    /*background-color: #d3d3d3;*/
+    height: 100px;
+}
+
+.grey {
+    background-color: lightgray;
+    height: 100px;
+}
+
+.playpausebutton {
+    font-size:100px;
+    border: 2px solid #d3d3d3;
+}
+
+.playpausebutton:focus {outline:0;}
+
+.totalcounter {
+    font-size:50px;
+}
+
+.nohover:hover{
+    text-decoration: none;
+}
+
+.myfooter {
+    text-align: center;
+}
+
+.resetholderz {
+    font-size: 12px;
+}
+
+.push-right {
+    margin-left:10px;
+}
+
+#filepicker {
+    padding: 120px 0 0 0;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+
+
+    <datastore-index kind="token_link" ancestor="false" source="manual">
+        <property name="user" direction="asc"/>
+        <property name="cruncher_name" direction="asc"/>
+    </datastore-index>
+
+
+    <datastore-index kind="user" ancestor="false" source="manual">
+        <property name="life_time_credits" direction="desc"/>
+        <property name="name" direction="asc"/>
+    </datastore-index>
+
+
+</datastore-indexes>
