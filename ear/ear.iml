@@ -9,7 +9,7 @@
     <facet type="javaeeApplication" name="JavaEE">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="application.xml" url="file://D:\GAE\vc-diss\ear/src/main/application/META-INF/maven-application.xml" />
+          <deploymentDescriptor name="application.xml" url="file://C:\Users\Tom\Desktop\prepack backup\vc-diss\ear/src/main/application/META-INF/maven-application.xml" />
         </descriptors>
       </configuration>
     </facet>
@@ -22,9 +22,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.8" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.8" level="project" />
     <orderEntry type="module" module-name="stats-out" />
     <orderEntry type="module" module-name="stats-in" />
     <orderEntry type="module" module-name="work-out" />

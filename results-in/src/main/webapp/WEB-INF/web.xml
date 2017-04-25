@@ -5,7 +5,7 @@
 
     <servlet>
         <servlet-name>resultsin</servlet-name>
-        <servlet-class>com.google.appspot.resultsin.java.v1.ResultsInServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.resultsin.ResultsInServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>resultsin</servlet-name>

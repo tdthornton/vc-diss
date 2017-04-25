@@ -8,7 +8,7 @@
 
     <servlet>
         <servlet-name>guestbook</servlet-name>
-        <servlet-class>com.google.appspot.statsout.StatsOutServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.statsout.StatsOutServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>guestbook</servlet-name>
@@ -18,7 +18,7 @@
 
     <servlet>
         <servlet-name>loggedinview</servlet-name>
-        <servlet-class>com.google.appspot.statsout.UserViewServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.statsout.UserViewServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>loggedinview</servlet-name>
@@ -27,7 +27,7 @@
 
     <servlet>
         <servlet-name>serviceCatalogue</servlet-name>
-        <servlet-class>com.google.appspot.statsout.HelperServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.statsout.HelperServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>serviceCatalogue</servlet-name>

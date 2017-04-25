@@ -5,7 +5,7 @@
 
     <servlet>
         <servlet-name>auth</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.AuthServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.servlets.AuthServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>auth</servlet-name>
@@ -14,7 +14,7 @@
 
     <servlet>
         <servlet-name>makeinputs</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.adminhelpers.MakeInputsServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.adminhelpers.MakeInputsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>makeinputs</servlet-name>
@@ -23,7 +23,7 @@
 
     <servlet>
         <servlet-name>clearinputs</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.adminhelpers.ClearInputs</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.adminhelpers.ClearInputs</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>clearinputs</servlet-name>
@@ -33,7 +33,7 @@
 
     <servlet>
         <servlet-name>toggleuserstatus</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.ToggleUserStatusServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.servlets.ToggleUserStatusServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>toggleuserstatus</servlet-name>
@@ -43,7 +43,7 @@
 
     <servlet>
         <servlet-name>clearexpired</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.CronServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.servlets.CronServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>clearexpired</servlet-name>
@@ -52,7 +52,7 @@
 
     <servlet>
         <servlet-name>totalcredits</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.TotalCreditsServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.servlets.TotalCreditsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>totalcredits</servlet-name>
@@ -61,7 +61,7 @@
 
     <servlet>
         <servlet-name>register</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.RegisterServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.servlets.RegisterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>register</servlet-name>
@@ -70,7 +70,7 @@
 
     <servlet>
         <servlet-name>verifyEmail</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.ConfirmEmailServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.servlets.ConfirmEmailServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>verifyEmail</servlet-name>
@@ -79,7 +79,7 @@
 
     <servlet>
         <servlet-name>resetpassword</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.ResetPasswordServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.servlets.ResetPasswordServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>resetpassword</servlet-name>
@@ -88,7 +88,7 @@
 
     <servlet>
         <servlet-name>newpassword</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.NewPasswordServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.servlets.NewPasswordServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>newpassword</servlet-name>
@@ -97,7 +97,7 @@
 
     <servlet>
         <servlet-name>deleteaccount</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.DeleteUserServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.servlets.DeleteUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>deleteaccount</servlet-name>
@@ -106,7 +106,7 @@
 
     <servlet>
         <servlet-name>updatecode</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.UpdateCodeServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.servlets.UpdateCodeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>updatecode</servlet-name>
@@ -116,7 +116,7 @@
 
     <servlet>
         <servlet-name>uploadinputs</servlet-name>
-        <servlet-class>com.google.appspot.vcdiss.ops.java.v1.servlets.UploadInputsServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.ops.servlets.UploadInputsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>uploadinputs</servlet-name>

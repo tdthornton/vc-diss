@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>work</servlet-name>
-        <servlet-class>com.google.appspot.workout.java.v1.WorkServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.workout.WorkServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>work</servlet-name>

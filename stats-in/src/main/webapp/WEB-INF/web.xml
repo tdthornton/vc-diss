@@ -5,7 +5,7 @@
 
     <servlet>
         <servlet-name>dq</servlet-name>
-        <servlet-class>com.google.appspot.statsin.java.v1.StatsInServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.statsin.StatsInServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>dq</servlet-name>
