@@ -16,15 +16,26 @@
 </head>
 
 <body>
-<div align="center" class="container">
+<li align="center" class="container">
     <h1>vc-diss</h1>
 
     <br><br><br>
-        ${error_text}
+        vc-diss is a new, distributed, cloud-based volunteer computing platform.
+
+    <br><br><br>
+    vc-diss is a new, distributed, cloud-based volunteer computing platform.
+    <br><br>
+    For the platform to work, it is essential to store a small amount of your data. This document details how that is handled, and why.
+    <br>
+    We understand that the privacy of what else goes on on the hardware you run vc-diss on is essential to you, so this
+    <br>document makes it easy to find what we can and can't record about your crunching.
+
+    <br><br>In addition to this document, all source code is available for inspection at <br>- https://github.com/tdthornton/dissertation<br>- https://github.com/tdthornton/vc-diss-cruncher
+    <br><br><br><br>
 
 <br><br><br><br><br><br><br>
-    <div class="myfooter" align="center"><a href="/about">about vc-diss</a> - T&C - privacy policy</div>
-</div>
+    <div class="myfooter" align="center"><a href="${footerUrls[0]}">about vc-diss</a> - <a href="${footerUrls[1]}">T&C</a> - <a href="${footerUrls[2]}">privacy policy</a></div>
+<br><br>
 
 
 </body>

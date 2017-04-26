@@ -111,7 +111,7 @@
 
     </div>
     <br><br><br><br><br>
-    <div class="myfooter" align="center">about vc-diss - T&C - privacy policy - <a href="#" onclick="deleteAccount()">delete
+    <div class="myfooter" align="center"><a href="${footerUrls[0]}">about vc-diss</a> - <a href="${footerUrls[1]}">T&C</a> - <a href="${footerUrls[2]}">privacy policy</a> - <a href="#" onclick="deleteAccount()">delete
         account</a> - <a href="/">log out</a></div>
 </div>
 <script type="text/javascript">

@@ -98,6 +98,7 @@ public class StatsOutServlet extends HttpServlet {
         req.setAttribute("statscount", stats.size());
         req.setAttribute("registerurl", LiveUrlCreator.getLiveUrl("ops", "register"));
         req.setAttribute("reseturl", LiveUrlCreator.getLiveUrl("ops", "resetpassword"));
+        req.setAttribute("footerUrls", LiveUrlCreator.getFooterUrls());
 
         resp.setContentType("text/html");
 

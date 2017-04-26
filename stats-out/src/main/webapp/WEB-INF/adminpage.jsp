@@ -49,7 +49,7 @@
     </label>
 
 <br><br><br><br><br><br><br>
-    <div class="myfooter" align="center">about vc-diss - T&C - privacy policy - <a href="/">log out</a></div>
+    <div class="myfooter" align="center"><a href="${footerUrls[0]}">about vc-diss</a> - <a href="${footerUrls[1]}">T&C</a> - <a href="${footerUrls[2]}">privacy policy</a> - <a href="/">log out</a></div>
 </div>
 
 

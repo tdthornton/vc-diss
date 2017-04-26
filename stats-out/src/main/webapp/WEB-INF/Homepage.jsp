@@ -45,7 +45,7 @@
 </form>
 </div>
     <br><br><br><br>
-    <span class="myfooter" align="center">about vc-diss - T&C - privacy policy - <a href="${registerurl}">register</a></span>
+    <span class="myfooter" align="center"><a href="${footerUrls[0]}">about vc-diss</a> - <a href="${footerUrls[1]}">T&C</a> - <a href="${footerUrls[2]}">privacy policy</a> - <a href="${registerurl}">register</a></span>
 </div>
 
 <script>

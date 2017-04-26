@@ -55,6 +55,7 @@ public class UserViewServlet extends HttpServlet {
             Authoriser authoriser = new Authoriser(credentials).authorise();
 
             resp.setContentType("text/html");
+            req.setAttribute("footerUrls", LiveUrlCreator.getFooterUrls());
 
             if (authoriser.wasSuccessful()) {
 

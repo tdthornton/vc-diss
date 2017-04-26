@@ -20,7 +20,20 @@
     <h1>vc-diss</h1>
 
     <br><br><br>
-        ${error_text}
+        vc-diss is a new, distributed, cloud-based volunteer computing platform.
+<br><br>
+        Volunteer computing (VC) is a pattern employed by people with too much data to process, where the work is split up
+        and distributed to volunteers, who "crunch" the work and reply with the results.
+    <br><br>
+        Lots of important work is currently being carried out using VC systems. For instance, <a href="http://folding.stanford.edu/">Folding@Home</a>, which
+        asks users to run simulations that could help advance cures for certain diseases.
+    <br><br>
+        But vc-diss is different. Using modern cloud technologies, our service is hosted more reliably, at a fraction of the cost.
+    <br><br>
+        We only support one algorithm at the moment, but with any support that will change.
+    <br><br>
+
+        You can start crunching work by reading https://github.com/tdthornton/dissertation
 
 <br><br><br><br><br><br><br>
     <div class="myfooter" align="center"><a href="/about">about vc-diss</a> - T&C - privacy policy</div>

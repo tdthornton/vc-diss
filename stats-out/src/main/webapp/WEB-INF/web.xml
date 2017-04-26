@@ -34,6 +34,35 @@
         <url-pattern>/serviceCatalogue</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>about</servlet-name>
+        <servlet-class>com.appspot.vcdiss.statsout.servlets.AboutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>about</servlet-name>
+        <url-pattern>/about</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>terms</servlet-name>
+        <servlet-class>com.appspot.vcdiss.statsout.servlets.TermsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>terms</servlet-name>
+        <url-pattern>/terms</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>privacy</servlet-name>
+        <servlet-class>com.appspot.vcdiss.statsout.servlets.PrivacyPolicyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>privacy</servlet-name>
+        <url-pattern>/privacy</url-pattern>
+    </servlet-mapping>
+
 
     <security-constraint>
         <web-resource-collection>
