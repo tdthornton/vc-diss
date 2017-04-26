@@ -16,12 +16,13 @@
 
 package com.appspot.vcdiss.statsout;
 
+import com.appspot.vcdiss.statsout.servlets.UserViewServlet;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalModulesServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
-import com.appspot.vcdiss.utils.DataUtils;
+import com.appspot.vcdiss.utils.test.DataUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -98,18 +99,21 @@ public class UserViewServletTest {
         verify(request).getParameter("password");
 
 
-        verify(request).getRequestDispatcher("/WEB-INF/loggedin.jsp");
+        verify(request).getRequestDispatcher("/WEB-INF/UserPage.jsp");
         verify(request).setAttribute("username", "test1");
         verify(request).setAttribute("app", "Super Prime Checker 1.0");
         verify(request).setAttribute("status", "start");
-        verify(request).setAttribute("vmcount", 0);
-        verify(request).setAttribute("weeklytotal", 0L);
-        verify(request).setAttribute("alltimetotal", 1000L);
-        verify(request).setAttribute(eq("accesstoken"), Matchers.anyString());
-        verify(request).setAttribute("badgelevelalltime", "GOLD");
-        verify(request).setAttribute("badgelevelthisweek", "STANDARD");
-        verify(request).setAttribute("togglestatusurl", "");
-        verify(request).setAttribute("deleteAccountUrl", "");
+        verify(request).setAttribute("vmCount", 0);
+        verify(request).setAttribute("weeklyTotal", 0L);
+        verify(request).setAttribute("allTimeTotal", 1000L);
+        verify(request).setAttribute(eq("accessToken"), Matchers.anyString());
+        verify(request).setAttribute("badgeLevelAllTime", "GOLD");
+        verify(request).setAttribute("badgeLevelThisWeek", "STANDARD");
+        verify(request).setAttribute("toggleStatusUrl", "");
+        verify(request).setAttribute("toggleStatusUrl", "");
+        verify(request).setAttribute("weekBadgeUrl", null);
+        verify(request).setAttribute("allTimeBadgeUrl", "/badges/vc-diss-badge-gold-all-time.png");
+        verify(request).setAttribute(eq("deleteAccountUrl"), Matchers.anyString());
 
         verify(mresponse).setContentType("text/html");
 
@@ -132,18 +136,20 @@ public class UserViewServletTest {
         verify(request).getParameter("password");
 
 
-        verify(request).getRequestDispatcher("/WEB-INF/loggedin.jsp");
+        verify(request).getRequestDispatcher("/WEB-INF/UserPage.jsp");
         verify(request).setAttribute("username", "test5");
         verify(request).setAttribute("app", "Super Prime Checker 1.0");
         verify(request).setAttribute("status", "start");
-        verify(request).setAttribute("vmcount", 0);
-        verify(request).setAttribute("weeklytotal", 1000L);
-        verify(request).setAttribute("alltimetotal", 2000L);
-        verify(request).setAttribute(eq("accesstoken"), Matchers.anyString());
-        verify(request).setAttribute("badgelevelalltime", "GOLD");
-        verify(request).setAttribute("badgelevelthisweek", "GOLD");
-        verify(request).setAttribute("togglestatusurl", "");
+        verify(request).setAttribute("vmCount", 0);
+        verify(request).setAttribute("weeklyTotal", 1000L);
+        verify(request).setAttribute("allTimeTotal", 2000L);
+        verify(request).setAttribute(eq("accessToken"), Matchers.anyString());
+        verify(request).setAttribute("badgeLevelAllTime", "GOLD");
+        verify(request).setAttribute("badgeLevelThisWeek", "GOLD");
+        verify(request).setAttribute("toggleStatusUrl", "");
         verify(request).setAttribute("deleteAccountUrl", "");
+        verify(request).setAttribute("allTimeBadgeUrl", "/badges/vc-diss-badge-gold-all-time.png");
+        verify(request).setAttribute("weekBadgeUrl", "/badges/vc-diss-badge-gold-this-week.png");
 
         verify(mresponse).setContentType("text/html");
 
@@ -162,7 +168,7 @@ public class UserViewServletTest {
 
         userViewServlet.doPost(request, mresponse);
 
-        verify(request).getRequestDispatcher("/WEB-INF/adminpage.jsp");
+        verify(request).getRequestDispatcher("/WEB-INF/AdminPage.jsp");
         verify(request).setAttribute("username", "admin1");
 
         verify(mresponse).setContentType("text/html");
@@ -178,7 +184,7 @@ public class UserViewServletTest {
         userViewServlet.doPost(request, mresponse);
 
         verify(mresponse).setContentType("text/html");
-        verify(request).getRequestDispatcher("/WEB-INF/errorpage.jsp");
+        verify(request).getRequestDispatcher("/WEB-INF/ErrorPage.jsp");
 
     }
 

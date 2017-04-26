@@ -19,11 +19,25 @@ public class HighscoresCheck {
 
     private Entity user;
 
-    public HighscoresCheck(Entity user) {
-        this.user = user;
+    public String getBadgeLevelThisWeek() {
+        return badgeLevelThisWeek;
     }
 
     public String getBadgeLevelAllTime() {
+        return badgeLevelAllTime;
+    }
+
+    private String badgeLevelThisWeek;
+    private String badgeLevelAllTime;
+
+
+    public HighscoresCheck(Entity user) throws EntityNotFoundException {
+        this.user = user;
+        badgeLevelAllTime = calculateBadgeLevelAllTime();
+        badgeLevelThisWeek = calculateBadgeLevelThisWeek();
+    }
+
+    public String calculateBadgeLevelAllTime() {
         DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
 
         List<Entity> statsInDb = ds.prepare(new Query("user") //get top 100 contributors
@@ -40,7 +54,8 @@ public class HighscoresCheck {
             }
         }
 
-        return getBadgeLevelText(rank);
+        badgeLevelAllTime = getBadgeLevelText(rank);
+        return badgeLevelAllTime;
     }
 
     private String getBadgeLevelText(int rank) {
@@ -55,7 +70,7 @@ public class HighscoresCheck {
         }
     }
 
-    public String getBadgeLevelThisWeek() throws EntityNotFoundException {
+    public String calculateBadgeLevelThisWeek() throws EntityNotFoundException {
         DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
 
 
@@ -76,7 +91,34 @@ public class HighscoresCheck {
             }
         }
 
-        return getBadgeLevelText(rank);
+        badgeLevelThisWeek = getBadgeLevelText(rank);
+        return badgeLevelThisWeek;
+    }
+
+    public String getBadgeUrlThisWeek() {
+
+        if (badgeLevelThisWeek.equals("BRONZE")) {
+            return "/badges/vc-diss-badge-bronze-this-week.png";
+        } else if (badgeLevelThisWeek.equals("SILVER")) {
+            return "/badges/vc-diss-badge-silver-this-week.png";
+        } else if (badgeLevelThisWeek.equals("GOLD")) {
+            return "/badges/vc-diss-badge-gold-this-week.png";
+        }
+
+        return null;
+    }
+
+    public String getBadgeUrlAllTime() {
+
+        if (badgeLevelAllTime.equals("BRONZE")) {
+            return "/badges/vc-diss-badge-bronze-all-time.png";
+        } else if (badgeLevelAllTime.equals("SILVER")) {
+            return "/badges/vc-diss-badge-silver-all-time.png";
+        } else if (badgeLevelAllTime.equals("GOLD")) {
+            return "/badges/vc-diss-badge-gold-all-time.png";
+        }
+
+        return null;
     }
 
 

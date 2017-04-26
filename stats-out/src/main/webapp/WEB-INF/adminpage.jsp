@@ -30,7 +30,7 @@
         <input class="btn btn-default btn-file" type="file" name="newcodefile" hidden><br><br>
 
         <input type="text" class="form-control" name="md5" placeholder="md5 hash">
-        <input type="text" name="token" value="${accesstoken}" hidden>
+        <input type="text" name="token" value="${accessToken}" hidden>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
     </label>
@@ -43,7 +43,7 @@
             <input class="btn btn-default btn-file" type="file" name="newInputsFile" hidden><br><br>
 
             <input type="text" class="form-control" name="md5" placeholder="md5 hash">
-            <input type="text" name="token" value="${accesstoken}" hidden>
+            <input type="text" name="token" value="${accessToken}" hidden>
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
     </label>

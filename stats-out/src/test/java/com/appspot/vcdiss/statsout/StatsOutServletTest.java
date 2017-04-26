@@ -18,6 +18,8 @@ package com.appspot.vcdiss.statsout;
 
 import static org.mockito.Mockito.*;
 
+import com.appspot.vcdiss.statsout.domain.Stat;
+import com.appspot.vcdiss.statsout.servlets.StatsOutServlet;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
@@ -25,9 +27,9 @@ import com.google.appengine.api.datastore.Query;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalModulesServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
-import com.appspot.vcdiss.utils.Authoriser;
-import com.appspot.vcdiss.utils.Credentials;
-import com.appspot.vcdiss.utils.DataUtils;
+import com.appspot.vcdiss.utils.security.Authoriser;
+import com.appspot.vcdiss.utils.security.Credentials;
+import com.appspot.vcdiss.utils.test.DataUtils;
 import com.appspot.vcdiss.utils.MiscUtils;
 import org.hamcrest.Description;
 import org.junit.After;
@@ -124,7 +126,7 @@ public class StatsOutServletTest {
 
         statsOutServlet.doGet(request, mresponse);
 
-        verify(request).getRequestDispatcher("/WEB-INF/guestbook.jsp");
+        verify(request).getRequestDispatcher("/WEB-INF/Homepage.jsp");
         verify(request).setAttribute(eq("stats"), statsListEq(stats));
         verify(request).setAttribute("statscount", 1);
         verify(request).setAttribute("registerurl", "");
@@ -147,7 +149,7 @@ public class StatsOutServletTest {
 
         statsOutServlet.doGet(request, mresponse);
 
-        verify(request).getRequestDispatcher("/WEB-INF/guestbook.jsp");
+        verify(request).getRequestDispatcher("/WEB-INF/Homepage.jsp");
         verify(request).setAttribute(eq("stats"), statsListEq(stats));
         verify(request).setAttribute("statscount", 0);
         verify(request).setAttribute("registerurl", "");
