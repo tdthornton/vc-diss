@@ -1,7 +1,7 @@
 package com.appspot.vcdiss.resultsin.domain;
 
 /**
- * Created by Tom on 16/03/2017.
+ * Domain class for encapsulating the json sent to the service via the task queue.
  */
 public class TestInboundKey {
     private String key;

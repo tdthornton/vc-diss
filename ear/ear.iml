@@ -9,7 +9,7 @@
     <facet type="javaeeApplication" name="JavaEE">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="application.xml" url="file://C:\Users\Tom\Desktop\prepack backup\vc-diss\ear/src/main/application/META-INF/maven-application.xml" />
+          <deploymentDescriptor name="application.xml" url="file://C:\Users\Tom\Desktop\prepackbackup\vc-diss\ear/src/main/application/META-INF/maven-application.xml" />
         </descriptors>
       </configuration>
     </facet>

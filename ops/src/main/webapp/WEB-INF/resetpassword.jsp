@@ -11,8 +11,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/css/main.css?v=1"/>
 </head>
 
@@ -35,7 +33,7 @@
         </form>
     </div>
     <br><br><br><br>
-    <span class="myfooter" align="center">about vc-diss - T&C - privacy policy - <a href="${registerurl}">register</a></span>
+    <span class="myfooter" align="center"><a href="${footerUrls[0]}">about vc-diss</a> - <a href="${footerUrls[1]}">T&C</a> - <a href="${footerUrls[2]}">privacy policy</a> - <a href="${registerurl}">register</a></span>
 </div>
 
 

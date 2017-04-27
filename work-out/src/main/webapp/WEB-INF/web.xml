@@ -5,11 +5,11 @@
 
 
     <servlet>
-        <servlet-name>work</servlet-name>
-        <servlet-class>com.appspot.vcdiss.workout.WorkServlet</servlet-class>
+        <servlet-name>getwork</servlet-name>
+        <servlet-class>com.appspot.vcdiss.workout.servlets.WorkServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>work</servlet-name>
+        <servlet-name>getwork</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 

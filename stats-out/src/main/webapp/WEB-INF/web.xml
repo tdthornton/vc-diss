@@ -8,7 +8,7 @@
 
     <servlet>
         <servlet-name>statsOutServlet</servlet-name>
-        <servlet-class>com.appspot.vcdiss.statsout.servlets.StatsOutServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.utils.servlets.StatsOutServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>statsOutServlet</servlet-name>
@@ -18,7 +18,7 @@
 
     <servlet>
         <servlet-name>userViewServlet</servlet-name>
-        <servlet-class>com.appspot.vcdiss.statsout.servlets.UserViewServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.utils.servlets.UserViewServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>userViewServlet</servlet-name>
@@ -27,7 +27,7 @@
 
     <servlet>
         <servlet-name>serviceCatalogue</servlet-name>
-        <servlet-class>com.appspot.vcdiss.statsout.servlets.HelperServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.utils.servlets.HelperServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>serviceCatalogue</servlet-name>
@@ -36,7 +36,7 @@
 
     <servlet>
         <servlet-name>about</servlet-name>
-        <servlet-class>com.appspot.vcdiss.statsout.servlets.AboutServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.utils.servlets.AboutServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>about</servlet-name>
@@ -46,7 +46,7 @@
 
     <servlet>
         <servlet-name>terms</servlet-name>
-        <servlet-class>com.appspot.vcdiss.statsout.servlets.TermsServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.utils.servlets.TermsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>terms</servlet-name>
@@ -56,7 +56,7 @@
 
     <servlet>
         <servlet-name>privacy</servlet-name>
-        <servlet-class>com.appspot.vcdiss.statsout.servlets.PrivacyPolicyServlet</servlet-class>
+        <servlet-class>com.appspot.vcdiss.utils.servlets.PrivacyPolicyServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>privacy</servlet-name>

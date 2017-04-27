@@ -4,7 +4,7 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.Key;
 
 /**
- * Created by Tom on 16/03/2017.
+ * Domain class for encapsulating the fields of a stat that has been persisted to the datastore, for easy comparison.
  */
 public class TestStatResult {
     private Key user;

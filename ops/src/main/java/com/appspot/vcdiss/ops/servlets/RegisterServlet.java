@@ -1,27 +1,12 @@
-/* Copyright (c) 2011 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.appspot.vcdiss.ops.servlets;
 
-import com.google.api.client.util.Base64;
-import com.google.appengine.api.datastore.*;
-
-
+import com.appspot.vcdiss.ops.domain.RegistrationRequest;
 import com.appspot.vcdiss.utils.EmailUtils;
 import com.appspot.vcdiss.utils.LiveUrlCreator;
-import com.appspot.vcdiss.utils.SecurityUtils;
+import com.appspot.vcdiss.utils.security.SecurityUtils;
+import com.google.api.client.util.Base64;
+import com.google.appengine.api.datastore.*;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.validator.routines.EmailValidator;
 
 import javax.servlet.RequestDispatcher;
@@ -50,8 +35,9 @@ public class RegisterServlet extends HttpServlet {
             throws IOException, ServletException {
 
         resp.setContentType("text/html");
+        req.setAttribute("footerUrls", LiveUrlCreator.getFooterUrls());
 
-        RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/register.jsp");
+        RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/Register.jsp");
         jsp.forward(req, resp);
 
     }
@@ -66,6 +52,8 @@ public class RegisterServlet extends HttpServlet {
 
         String validationError = checkValidationError(registrationRequest);
 
+        req.setAttribute("footerUrls", LiveUrlCreator.getFooterUrls());
+
         if (validationError.equals("None")) {
             Key userKey = persist(registrationRequest);
             String verificationCode = getNewVerificationCode(userKey);
@@ -74,14 +62,14 @@ public class RegisterServlet extends HttpServlet {
             req.setAttribute("info_text", "Welcome to vc-diss, " + registrationRequest.getUsername() + ".\nWe have sent you a link to verify your email address.");
             resp.setContentType("text/html");
 
-            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/infopage.jsp");
+            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/InfoPage.jsp");
             jsp.forward(req, resp);
         } else {
             resp.setStatus(408);
             req.setAttribute("info_text", "There was an error processing your registration: " + validationError);
             resp.setContentType("text/html");
 
-            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/infopage.jsp");
+            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/InfoPage.jsp");
             jsp.forward(req, resp);
         }
 
@@ -150,6 +138,14 @@ public class RegisterServlet extends HttpServlet {
 
 
     private String checkValidationError(RegistrationRequest registrationRequest) {
+
+        if (!StringUtils.isAlphanumeric(registrationRequest.getUsername())) {
+            return "Your username must be alphanumeric. Please try again.";
+        }
+
+        if (!StringUtils.isAlphanumeric(registrationRequest.getPassword())) {
+            return "Your password must be alphanumeric. Please try again.";
+        }
 
         if (registrationRequest.anyFieldIsNullOrInvalid()) {
             return "There was an error with your details. Please try again.";

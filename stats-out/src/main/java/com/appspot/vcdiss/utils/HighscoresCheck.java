@@ -1,9 +1,6 @@
-package com.appspot.vcdiss.statsout;
+package com.appspot.vcdiss.utils;
 
 import com.google.appengine.api.datastore.*;
-
-
-import com.appspot.vcdiss.utils.MiscUtils;
 
 import java.util.List;
 import java.util.logging.Logger;

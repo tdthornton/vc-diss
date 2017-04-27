@@ -1,7 +1,7 @@
 package com.appspot.vcdiss.statsin.exceptions;
 
 /**
- * Created by Tom on 24/03/2017.
+ * An exception indicating that the input sent to the service is not yet ready for crediting.
  */
 public class InputNotSatisfiedException extends Throwable {
 

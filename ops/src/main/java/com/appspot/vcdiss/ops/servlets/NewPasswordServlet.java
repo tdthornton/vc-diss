@@ -1,27 +1,10 @@
-/**
- * Copyright 2012 Google Inc. All Rights Reserved.
- * <p/>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p/>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.appspot.vcdiss.ops.servlets;
 
-import com.google.appengine.api.datastore.*;
-
-
 import com.appspot.vcdiss.utils.EmailUtils;
+import com.appspot.vcdiss.utils.LiveUrlCreator;
 import com.appspot.vcdiss.utils.MiscUtils;
-import com.appspot.vcdiss.utils.SecurityUtils;
+import com.appspot.vcdiss.utils.security.SecurityUtils;
+import com.google.appengine.api.datastore.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -44,6 +27,7 @@ public class NewPasswordServlet extends HttpServlet {
 
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         String code = req.getParameter("code");
+        req.setAttribute("footerUrls", LiveUrlCreator.getFooterUrls());
 
         try {
 
@@ -52,7 +36,7 @@ public class NewPasswordServlet extends HttpServlet {
 
                 req.setAttribute("resetCode", code);
 
-                RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/newpassword.jsp");
+                RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/NewPassword.jsp");
                 jsp.forward(req, resp);
             } else {
                 throw new NullPointerException("Unauthorised password reset attempt with code: " + code);
@@ -65,7 +49,7 @@ public class NewPasswordServlet extends HttpServlet {
 
             req.setAttribute("info_text", "You have supplied an invalid password reset code.");
 
-            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/infopage.jsp");
+            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/InfoPage.jsp");
             jsp.forward(req, resp);
 
         }
@@ -82,6 +66,8 @@ public class NewPasswordServlet extends HttpServlet {
 
         String password = req.getParameter("password");
         String code = req.getParameter("code");
+
+        req.setAttribute("footerUrls", LiveUrlCreator.getFooterUrls());
 
         try {
 
@@ -102,7 +88,7 @@ public class NewPasswordServlet extends HttpServlet {
                         "\nPlease contact us if this was not you." +
                         "\n\nThanks, \n vc-diss team", "vc-diss: Security Alert", (String) user.getProperty("email"));
 
-                RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/infopage.jsp");
+                RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/InfoPage.jsp");
                 jsp.forward(req, resp);
             } else {
                 throw new NullPointerException("No user associated with reset code " + code);
@@ -117,7 +103,7 @@ public class NewPasswordServlet extends HttpServlet {
             req.setAttribute("info_text", "There was an error with the password reset code.");
             resp.setContentType("text/html");
 
-            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/infopage.jsp");
+            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/InfoPage.jsp");
             jsp.forward(req, resp);
         }
 

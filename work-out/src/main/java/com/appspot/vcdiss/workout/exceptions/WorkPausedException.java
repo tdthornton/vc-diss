@@ -1,7 +1,7 @@
 package com.appspot.vcdiss.workout.exceptions;
 
 /**
- * Created by Tom on 14/03/2017.
+ * Exception indicating a user whose crunching is currently paused attempted to get work.
  */
 public class WorkPausedException extends Exception {
     public WorkPausedException(String message) {

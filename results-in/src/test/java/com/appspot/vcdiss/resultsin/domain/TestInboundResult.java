@@ -1,7 +1,7 @@
 package com.appspot.vcdiss.resultsin.domain;
 
 /**
- * Created by Tom on 13/03/2017.
+ * Domain class for incapsulating the inbound json of a new result.
  */
 public class TestInboundResult {
     private long input;

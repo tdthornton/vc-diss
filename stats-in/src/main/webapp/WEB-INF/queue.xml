@@ -1,6 +1,7 @@
 <queue-entries>
     <queue>
         <name>default</name>
-        <rate>2/m</rate>
+        <rate>100/m</rate>
+        <bucket-size>10</bucket-size>
     </queue>
 </queue-entries>

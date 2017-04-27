@@ -1,4 +1,4 @@
-package com.appspot.vcdiss.statsout.domain;
+package com.appspot.vcdiss.utils.domain;
 
 /**
  * Domain class for holding data that will be turned into a bar chart on the homepage.

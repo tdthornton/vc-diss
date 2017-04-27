@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by Tom on 15/04/2017.
+ * Used only by unit tests to inject dummy data into a test datastore environment.
  */
 public class DataUtils {
 
@@ -74,6 +74,11 @@ public class DataUtils {
         inputs.add(makeSampleInput(0, 1));
         inputs.add(makeSampleInput(0, 0));
         inputs.add(makeSampleInput(3, 3));
+        inputs.add(makeSampleInput(3, 0));
+        inputs.add(makeSampleInput(3, 0));
+        inputs.add(makeSampleInput(3, 0));
+        inputs.add(makeSampleInput(3, 0));
+        inputs.add(makeSampleInput(3, 0));
 
 
     }

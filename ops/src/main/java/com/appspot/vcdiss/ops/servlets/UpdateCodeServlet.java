@@ -1,25 +1,8 @@
-/**
- * Copyright 2012 Google Inc. All Rights Reserved.
- * <p/>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p/>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.appspot.vcdiss.ops.servlets;
 
-import com.google.appengine.api.datastore.*;
-
-
+import com.appspot.vcdiss.utils.LiveUrlCreator;
 import com.appspot.vcdiss.utils.MiscUtils;
+import com.google.appengine.api.datastore.*;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.fileupload.FileItemIterator;
 import org.apache.commons.fileupload.FileItemStream;
@@ -38,7 +21,7 @@ import java.util.logging.Logger;
 
 
 /**
- * Servlet that toggles the status (crunching/paused) of the user associated with an access token.
+ * Servlet that accepts and processes the upload of updated algorithm code.
  */
 public class UpdateCodeServlet extends HttpServlet {
 
@@ -65,12 +48,13 @@ public class UpdateCodeServlet extends HttpServlet {
             resp.setHeader("Access-Control-Allow-Origin", req.getHeader("Origin"));
         }
 
-
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
         String hash = "";
         String token = "";
         String newCode = "";
+
+        req.setAttribute("footerUrls", LiveUrlCreator.getFooterUrls());
 
         try { //just extracting file and md5 textbox inputs from the POST in a nasty javax-style manual mutlipart/form handler
             ServletFileUpload upload = new ServletFileUpload();
@@ -94,7 +78,7 @@ public class UpdateCodeServlet extends HttpServlet {
             }
         } catch (Exception e) {
             req.setAttribute("info_text", "There was an error with your inputs, please try again.");
-            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/infopage.jsp");
+            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/InfoPage.jsp");
             jsp.forward(req, resp);
         }
 
@@ -131,7 +115,7 @@ public class UpdateCodeServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
             req.setAttribute("info_text", "There was an error with your inputs, please try again.");
-            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/infopage.jsp");
+            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/InfoPage.jsp");
             jsp.forward(req, resp);
         }
 
@@ -154,6 +138,10 @@ public class UpdateCodeServlet extends HttpServlet {
                 .asSingleEntity();
 
         if (user == null) {
+            return null;
+        }
+
+        if (!(boolean)user.getProperty("admin")) {
             return null;
         }
 

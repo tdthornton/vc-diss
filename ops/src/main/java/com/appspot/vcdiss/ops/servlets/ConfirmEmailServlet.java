@@ -1,24 +1,7 @@
-/**
- * Copyright 2012 Google Inc. All Rights Reserved.
- * <p/>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p/>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.appspot.vcdiss.ops.servlets;
 
+import com.appspot.vcdiss.utils.LiveUrlCreator;
 import com.google.appengine.api.datastore.*;
-
-
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -46,6 +29,8 @@ public class ConfirmEmailServlet extends HttpServlet {
 
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
+        req.setAttribute("footerUrls", LiveUrlCreator.getFooterUrls());
+
 
         try {
             Entity code = getConfirmationCodeEntity(confirmationCode, datastore);
@@ -63,7 +48,7 @@ public class ConfirmEmailServlet extends HttpServlet {
                     req.setAttribute("info_text", "Thank you for verifying your email address.");
                     resp.setContentType("text/html");
 
-                    RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/infopage.jsp");
+                    RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/InfoPage.jsp");
                     jsp.forward(req, resp);
 
                     LOG.info("User " + user.getProperty("name") + " verified email");
@@ -84,7 +69,7 @@ public class ConfirmEmailServlet extends HttpServlet {
             req.setAttribute("info_text", "There was an error with the email verification code.");
             resp.setContentType("text/html");
 
-            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/infopage.jsp");
+            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/InfoPage.jsp");
             jsp.forward(req, resp);
 
             e.printStackTrace();

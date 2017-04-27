@@ -21,7 +21,7 @@ public class EmailUtils {
         Message msg = new MimeMessage(session);
 
         try {
-            msg.setFrom(new InternetAddress("tomthornton.123@gmail.com", "Owner"));
+            msg.setFrom(new InternetAddress("tomthornton.123@gmail.com", "vc-diss"));
 
             msg.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
 
@@ -37,48 +37,6 @@ public class EmailUtils {
             System.out.println("ERROR::::::" + e.getMessage());
             System.out.println("ERROR::::::" + e.getLocalizedMessage());
         }
-
-
-        try {
-            System.out.println("now trying appspot");
-            msg.setFrom(new InternetAddress("vc-diss@appspot.gserviceaccount.com", "Admin"));
-
-            msg.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
-            msg.setRecipient(Message.RecipientType.TO, new InternetAddress(email));
-
-            System.out.println("**EMAILDEBUG**");
-
-            msg.setSubject(subject);
-            msg.setText(messageBody);
-            msg.setSentDate(new Date());
-            Transport.send(msg);
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("ERROR::::::" + e.getStackTrace());
-            System.out.println("ERROR::::::" + e.getMessage());
-            System.out.println("ERROR::::::" + e.getLocalizedMessage());
-        }
-
-        try {
-            System.out.println("now trying appspot");
-            msg.setFrom(new InternetAddress("anything@vc-diss.appspotmail.com", "Admin"));
-
-            msg.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
-            msg.setRecipient(Message.RecipientType.TO, new InternetAddress(email));
-
-            System.out.println("**EMAILDEBUG**");
-
-            msg.setSubject(subject);
-            msg.setText(messageBody);
-            msg.setSentDate(new Date());
-            Transport.send(msg);
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("ERROR::::::" + e.getStackTrace());
-            System.out.println("ERROR::::::" + e.getMessage());
-            System.out.println("ERROR::::::" + e.getLocalizedMessage());
-        }
-
 
 
 

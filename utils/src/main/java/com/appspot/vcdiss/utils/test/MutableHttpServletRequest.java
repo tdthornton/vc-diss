@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequestWrapper;
 import java.util.*;
 
 /**
- * Created by Tom on 14/03/2017.
+ * A wrapper for the servlet class that allows mutable headers.
  */
 public class MutableHttpServletRequest extends HttpServletRequestWrapper {
     // holds custom header and value mapping

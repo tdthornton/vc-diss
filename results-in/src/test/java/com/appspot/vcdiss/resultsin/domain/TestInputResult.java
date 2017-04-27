@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Tom on 15/03/2017.
+ * Domain class encapsulating the fields present in an input in the datastore, for easy comparison with the actual values.
  */
 public class TestInputResult {
     String input;

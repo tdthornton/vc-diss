@@ -1,26 +1,8 @@
-/**
- * Copyright 2012 Google Inc. All Rights Reserved.
- * <p/>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p/>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.appspot.vcdiss.ops.servlets;
 
-import com.google.appengine.api.datastore.*;
-
-
-
+import com.appspot.vcdiss.utils.LiveUrlCreator;
 import com.appspot.vcdiss.utils.MiscUtils;
+import com.google.appengine.api.datastore.*;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.fileupload.FileItemIterator;
 import org.apache.commons.fileupload.FileItemStream;
@@ -35,12 +17,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.NoSuchAlgorithmException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
 import java.util.logging.Logger;
 
 
 /**
- * Servlet that toggles the status (crunching/paused) of the user associated with an access token.
+ * Servlet that accepts and processes the upload of new inputs for the platform.
  */
 public class UploadInputsServlet extends HttpServlet {
 
@@ -74,6 +59,8 @@ public class UploadInputsServlet extends HttpServlet {
         String token = "";
         String newInputs = "";
 
+        req.setAttribute("footerUrls", LiveUrlCreator.getFooterUrls());
+
         try { //just extracting csv file and md5 textbox inputs from the POST in a nasty javax-style manual mutlipart/form handler
             ServletFileUpload upload = new ServletFileUpload();
             FileItemIterator iterator = null;
@@ -84,19 +71,21 @@ public class UploadInputsServlet extends HttpServlet {
             while (iterator.hasNext()) {
                 FileItemStream item = iterator.next();
                 if (item.isFormField()) {
+                    System.out.println(item.getFieldName());
                     if (item.getFieldName().equals("md5")) {
                         hash = IOUtils.toString(item.openStream(), "utf-8");
                     } else if (item.getFieldName().equals("token")) {
                         token = IOUtils.toString(item.openStream(), "utf-8");
                     }
                 } else {
+                    System.out.println(item.getFieldName());
                     newInputs = IOUtils.toString(item.openStream(), "utf-8");
 
                 }
             }
         } catch (Exception e) {
             req.setAttribute("error_text", "There was an error with your inputs, please try again.");
-            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/infopage.jsp");
+            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/InfoPage.jsp");
             jsp.forward(req, resp);
         }
 
@@ -118,7 +107,7 @@ public class UploadInputsServlet extends HttpServlet {
 
                     resp.setStatus(200);
                     req.setAttribute("info_text", "Your new inputs were uploaded successfully.");
-                    RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/infopage.jsp");
+                    RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/InfoPage.jsp");
                     jsp.forward(req, resp);
 
                 } else {
@@ -132,7 +121,7 @@ public class UploadInputsServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
             req.setAttribute("info_text", "There was an error with your inputs, please try again.");
-            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/infopage.jsp");
+            RequestDispatcher jsp = req.getRequestDispatcher("/WEB-INF/InfoPage.jsp");
             jsp.forward(req, resp);
         }
 

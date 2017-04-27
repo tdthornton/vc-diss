@@ -1,6 +1,5 @@
 package com.appspot.vcdiss.utils.security;
 
-import com.appspot.vcdiss.utils.Credentials;
 import com.appspot.vcdiss.utils.EmailUtils;
 import com.google.api.client.util.Base64;
 import com.google.appengine.api.datastore.DatastoreService;

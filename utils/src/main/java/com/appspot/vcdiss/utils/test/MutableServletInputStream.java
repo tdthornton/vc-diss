@@ -1,13 +1,11 @@
 package com.appspot.vcdiss.utils.test;
 
-
-
 import javax.servlet.ServletInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * Created by Tom on 14/03/2017.
+ * A wrapper to allow InputStreams to masquerade as HttpServletInputStreams.
  */
 public class MutableServletInputStream extends ServletInputStream {
 

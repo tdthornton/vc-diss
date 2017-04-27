@@ -1,28 +1,12 @@
-/**
- * Copyright 2012 Google Inc. All Rights Reserved.
- * <p/>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p/>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+package com.appspot.vcdiss.utils;
 
-package com.appspot.vcdiss.statsout;
-
-import com.appspot.vcdiss.statsout.servlets.UserViewServlet;
+import com.appspot.vcdiss.utils.servlets.UserViewServlet;
+import com.appspot.vcdiss.utils.test.DataUtils;
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalModulesServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
-import com.appspot.vcdiss.utils.test.DataUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -114,6 +98,7 @@ public class UserViewServletTest {
         verify(request).setAttribute("weekBadgeUrl", null);
         verify(request).setAttribute("allTimeBadgeUrl", "/badges/vc-diss-badge-gold-all-time.png");
         verify(request).setAttribute(eq("deleteAccountUrl"), Matchers.anyString());
+        verify(request).setAttribute(eq("footerUrls"), Matchers.any());
 
         verify(mresponse).setContentType("text/html");
 
@@ -150,6 +135,7 @@ public class UserViewServletTest {
         verify(request).setAttribute("deleteAccountUrl", "");
         verify(request).setAttribute("allTimeBadgeUrl", "/badges/vc-diss-badge-gold-all-time.png");
         verify(request).setAttribute("weekBadgeUrl", "/badges/vc-diss-badge-gold-this-week.png");
+        verify(request).setAttribute(eq("footerUrls"), Matchers.any());
 
         verify(mresponse).setContentType("text/html");
 

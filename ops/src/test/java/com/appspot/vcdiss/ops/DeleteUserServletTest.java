@@ -17,12 +17,12 @@
 package com.appspot.vcdiss.ops;
 
 import com.appspot.vcdiss.ops.servlets.DeleteUserServlet;
-import com.appspot.vcdiss.ops.servlets.TotalCreditsServlet;
-import com.appspot.vcdiss.utils.Authoriser;
-import com.appspot.vcdiss.utils.Credentials;
-import com.appspot.vcdiss.utils.DataUtils;
+import com.appspot.vcdiss.utils.security.Authoriser;
+import com.appspot.vcdiss.utils.security.Credentials;
+import com.appspot.vcdiss.utils.test.DataUtils;
 import com.google.appengine.api.datastore.*;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
+import com.google.appengine.tools.development.testing.LocalModulesServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import org.junit.After;
 import org.junit.Assert;
@@ -47,7 +47,7 @@ public class DeleteUserServletTest {
     DatastoreService ds = DatastoreServiceFactory.getDatastoreService();
 
     private final LocalServiceTestHelper helper =
-            new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig())
+            new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig(), new LocalModulesServiceTestConfig())
                     .setEnvIsLoggedIn(true)
                     .setEnvAuthDomain("localhost")
                     .setEnvEmail("test@localhost");

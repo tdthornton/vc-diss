@@ -23,7 +23,7 @@
         ${info_text}
 
 <br><br><br><br><br><br><br>
-    <div class="myfooter" align="center">about vc-diss - T&C - privacy policy</div>
+    <div class="myfooter" align="center"><a href="${footerUrls[0]}">about vc-diss</a> - <a href="${footerUrls[1]}">T&C</a> - <a href="${footerUrls[2]}">privacy policy</a> - </div>
 </div>
 
 

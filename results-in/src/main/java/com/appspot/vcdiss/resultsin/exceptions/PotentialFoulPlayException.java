@@ -1,7 +1,7 @@
 package com.appspot.vcdiss.resultsin.exceptions;
 
 /**
- * Created by Tom on 14/03/2017.
+ * Exception indicating a result from a user who was never sent the relevant input.
  */
 public class PotentialFoulPlayException extends Exception {
     public PotentialFoulPlayException(String message) {
