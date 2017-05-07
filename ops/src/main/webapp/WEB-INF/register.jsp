@@ -16,7 +16,7 @@
 <body>
 
 <div align="center" class="container">
-    <h1>vc-diss</h1>
+    <h1><a href="${footerUrls[3]}">vc-diss</a></h1>
     <br><br><br><h4>Register for a new account:</h4>
 
     <br><br>

@@ -17,7 +17,7 @@ public class LiveUrlCreator {
         ModulesService modules = ModulesServiceFactory.getModulesService();
 
         if (modules.getModules().size() > 1) {
-            URL ops = new URL("https://" + modules.getVersionHostname(module, null) + "/");
+            URL ops = new URL("https://" + modules.getVersionHostname(module, null) + "/"); //TODO https
 
             opsUrl = ops.toExternalForm();
 
@@ -33,7 +33,7 @@ public class LiveUrlCreator {
 
     public static String[] getFooterUrls() throws MalformedURLException {
 
-        return new String[]{getLiveUrl("default", "about"), getLiveUrl("default", "terms"), getLiveUrl("default", "privacy")};
+        return new String[]{getLiveUrl("default", "about"), getLiveUrl("default", "terms"), getLiveUrl("default", "privacy"), getLiveUrl("default", "")};
 
     }
 }

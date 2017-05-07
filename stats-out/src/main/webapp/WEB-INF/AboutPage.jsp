@@ -17,7 +17,7 @@
 
 <body>
 <div align="center" class="container">
-    <h1>vc-diss</h1>
+    <h1><a href="${footerUrls[3]}">vc-diss</a></h1>
 
     <br><br><br>
         vc-diss is a new, distributed, cloud-based volunteer computing platform.
@@ -31,9 +31,9 @@
         But vc-diss is different. Using modern cloud technologies, our service is hosted more reliably, at a fraction of the cost.
     <br><br>
         We only support one algorithm at the moment, but with any support that will change.
-    <br><br>
+    <br><br><br><br><br><br>
 
-        You can start crunching work by reading https://github.com/tdthornton/dissertation
+        <h3>You can start crunching work by reading https://github.com/tdthornton/dissertation</h3>
 
 <br><br><br><br><br><br><br>
     <div class="myfooter" align="center"><a href="/about">about vc-diss</a> - T&C - privacy policy</div>

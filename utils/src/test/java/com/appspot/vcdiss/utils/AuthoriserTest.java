@@ -93,7 +93,7 @@ public class AuthoriserTest {
         badCredentials.setUsername("test1");
         badCredentials.setPassword("pass");
 
-        authoriser = new Authoriser(badCredentials).authorise();
+        authoriser = new Authoriser(goodCredentialsButLockedByNow).authorise();
         Assert.assertFalse(authoriser.wasSuccessful());
 
 

@@ -18,7 +18,7 @@
 
 <body>
 <div align="center" class="container">
-    <h1>vc-diss</h1>
+    <h1><a href="${footerUrls[3]}">vc-diss</a></h1>
     <br><br><h4>This week's top crunchers are:</h4>
 <div id="graphHolder">
     <div id="myfirstchart" style="height: 300px; width:90%" ></div>

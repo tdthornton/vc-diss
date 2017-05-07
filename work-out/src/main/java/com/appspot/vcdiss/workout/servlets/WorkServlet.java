@@ -37,6 +37,7 @@ public class WorkServlet extends HttpServlet {
             Entity user = authenticateUser(auth, datastore);
 
             if (user == null) {
+                System.out.println(auth);
                 throw new SecurityException();
             }
 

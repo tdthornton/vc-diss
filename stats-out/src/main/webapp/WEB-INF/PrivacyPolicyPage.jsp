@@ -16,22 +16,32 @@
 </head>
 
 <body>
-<li align="center" class="container">
-    <h1>vc-diss</h1>
+<li class="container">
+    <h1><a href="${footerUrls[3]}">vc-diss</a></h1>
 
     <br><br><br>
-        vc-diss is a new, distributed, cloud-based volunteer computing platform.
+    Privacy Policy
 
     <br><br><br>
-    vc-diss is a new, distributed, cloud-based volunteer computing platform.
     <br><br>
-    For the platform to work, it is essential to store a small amount of your data. This document details how that is handled, and why.
-    <br>
-    We understand that the privacy of what else goes on on the hardware you run vc-diss on is essential to you, so this
-    <br>document makes it easy to find what we can and can't record about your crunching.
+
+
+    Your privacy is important to us.
+
+    It is vc-diss's policy to respect your privacy regarding any information we may collect while operating our website. Accordingly, we have developed this privacy policy in order for you to understand how we collect, use, communicate, disclose and otherwise make use of personal information. We have outlined our privacy policy below.
+
+    <br><br>We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.
+    <br><br>Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.
+    <br><br>We will collect and use personal information solely for fulfilling those purposes specified by us and for other ancillary purposes, unless we obtain the consent of the individual concerned or as required by law.
+    <br><br>Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.
+    <br><br>We will protect personal information by using reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.
+    <br><br>We will make readily available to customers information about our policies and practices relating to the management of personal information.
+    <br><br>We will only retain personal information for as long as necessary for the fulfilment of those purposes.
+    <br><br>We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained. vc-diss may change this privacy policy from time to time at vc-diss's sole discretion.
 
     <br><br>In addition to this document, all source code is available for inspection at <br>- https://github.com/tdthornton/dissertation<br>- https://github.com/tdthornton/vc-diss-cruncher
-    <br><br><br><br>
+    <br>In this early stage of the project, the privacy policy is not finalised.
+
 
 <br><br><br><br><br><br><br>
     <div class="myfooter" align="center"><a href="${footerUrls[0]}">about vc-diss</a> - <a href="${footerUrls[1]}">T&C</a> - <a href="${footerUrls[2]}">privacy policy</a></div>

@@ -16,7 +16,7 @@
 
 <body>
 <div align="center" class="container">
-    <h1>vc-diss</h1>
+    <h1><a href="${footerUrls[3]}">vc-diss</a></h1>
     <br><br><h4>Enter your email to receive a password reset code:</h4>
 
     <br><br><br><br><br>
