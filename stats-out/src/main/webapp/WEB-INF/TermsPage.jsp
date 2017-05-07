@@ -20,13 +20,13 @@
     <h1><a href="${footerUrls[3]}">vc-diss</a></h1>
 
     <br><br><br>
-        vc-diss is a new, distributed, cloud-based volunteer computing platform.
+        <h4>vc-diss is a new, distributed, cloud-based volunteer computing platform.
     <br><br>
         Such a platform faces a few unique restrictions, which is why we've compiled the terms and conditions
         <br> of use into this short document.
 
         <br>These terms define how we will act, and how you must act, when using the system.
-    <br>In this early stage of the project, the terms are not finalised.
+    <br>In this early stage of the project, the terms are not finalised.</h4>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     vc-diss Terms of Service and Privacy Policy
 

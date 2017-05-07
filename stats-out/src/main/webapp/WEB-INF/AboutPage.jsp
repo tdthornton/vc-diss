@@ -30,10 +30,15 @@
     <br><br>
         But vc-diss is different. Using modern cloud technologies, our service is hosted more reliably, at a fraction of the cost.
     <br><br>
-        We only support one algorithm at the moment, but with any support that will change.
+        We only support one project at the moment, but with your support that will grow.
+
     <br><br><br><br><br><br>
 
-        <h3>You can start crunching work by reading https://github.com/tdthornton/dissertation</h3>
+        <h3>You can start crunching work by reading <a href="https://github.com/tdthornton/vc-diss">our repository</a>.</h3>
+
+    <br><br><br><br><br>
+
+    If you are a strong participant, you will be granted a badge to display on your website which, as the platform grows in reputation, will be great promotion.
 
 <br><br><br><br><br><br><br>
     <div class="myfooter" align="center"><a href="/about">about vc-diss</a> - T&C - privacy policy</div>

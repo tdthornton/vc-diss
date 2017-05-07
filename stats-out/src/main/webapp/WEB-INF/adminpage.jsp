@@ -21,9 +21,10 @@
 
     <br><br><br>
         <h3>Welcome to the admin page for ${app}</h3><br>
-        <h5>You can update the code for this app below.</h5><br><br><br>
+        <br><br><br>
 
 
+    <h5>You can update the algorithm code:</h5>
     <label class="btn btn-default btn-file">
     <form class="form-inline" action="${updateCodeUrl}" enctype="multipart/form-data" method="POST">
 
@@ -35,8 +36,8 @@
     </form>
     </label>
 
-    <br><br>
-
+    <br><br><br><br>
+    <h5>Or upload new inputs:</h5>
     <label class="btn btn-default btn-file">
         <form class="form-inline" action="${uploadInputsUrl}" enctype="multipart/form-data" method="POST">
 
