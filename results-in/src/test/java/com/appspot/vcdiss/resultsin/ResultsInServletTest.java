@@ -173,14 +173,17 @@ public class ResultsInServletTest {
 
 
         TestInputResult expected = new TestInputResult(String.valueOf(inputNo),
-                new String[]{KeyFactory.keyToString(users.get(2).getKey()), null, null},
-                new String[]{"true", null , null },
-                new String[]{KeyFactory.keyToString(users.get(0).getKey()), KeyFactory.keyToString(users.get(1).getKey()), KeyFactory.keyToString(users.get(2).getKey())},
-                (Key) inputs.get(0).getProperty("app"),
-                false);
+                new String[]{KeyFactory.keyToString(users.get(2).getKey()), null, null}, //expected users in "results from" list
+                new String[]{"true", null , null },                                      //expected results received
+                new String[]{KeyFactory.keyToString(users.get(0).getKey()),              //expected users in "distributed to" list
+            KeyFactory.keyToString(users.get(1).getKey()),
+            KeyFactory.keyToString(users.get(2).getKey())},
+                (Key) inputs.get(0).getProperty("app"),                                  //expected key for app the input belongs to
+                false);                                                                  //expected canonical result status
 
 
-        TestInputResult actual = new TestInputResult(ds.get(inputs.get(0).getKey()).getProperties());
+        TestInputResult actual = new TestInputResult(ds.get(inputs.get(0).getKey()).getProperties()); //test object inflated with
+                                                                                                      //real db result for comparison
 
 
         Assert.assertEquals(expected, actual);
