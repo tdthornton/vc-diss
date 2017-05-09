@@ -194,19 +194,6 @@ public class StatsInServletTest {
         verifyCredited(false, inputs.get(1).getKey());
     }
 
-    @Test
-    public void testDoPostAppDeleted() throws IOException, EntityNotFoundException {
-
-        ds.delete(apps.get(0).getKey());
-
-        postBasicInput(new TestInboundKey(KeyFactory.keyToString(inputs.get(1).getKey())), 410);
-
-
-        verifyCredited(false, inputs.get(0).getKey());
-        verifyCredited(false, inputs.get(1).getKey());
-    }
-
-
     public void postBasicInput(TestInboundKey result, int expectedStatusCode) throws IOException {
         postBasicInput(result, "authToken", expectedStatusCode);
     }
