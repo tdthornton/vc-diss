@@ -33,12 +33,10 @@
 <form id="signinform" class="form-inline" id="login" action="/userview" method="post">
     <div id="formelementsholder">
     <div class="form-group">
-        <input type="text" class="form-control" name="username" value="admin1">
-        <%--<input type="text" class="form-control" name="username" placeholder="Username">--%>
+        <input type="text" class="form-control" name="username">
     </div>
     <div class="form-group">
-        <input type="password" class="form-control" name="password" value="pass">
-        <%--<input type="text" class="form-control" name="password" placeholder="Password">--%>
+        <input type="password" class="form-control" name="password">
     </div>
 
 

@@ -17,7 +17,7 @@ public class LiveUrlCreator {
         ModulesService modules = ModulesServiceFactory.getModulesService();
 
         if (modules.getModules().size() > 1) {
-            URL ops = new URL("https://" + modules.getVersionHostname(module, null) + "/"); //TODO https
+            URL ops = new URL("https://" + modules.getVersionHostname(module, null) + "/"); //TODO ****IF DEPLOYED LOCALLY, CHANGE TO HTTP****
 
             opsUrl = ops.toExternalForm();
 

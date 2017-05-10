@@ -27,17 +27,15 @@
         <form id="registerform" class="form-inline" id="register" action="/register" method="post">
             <div id="formelementsholder">
                 <div class="form-group paddown">
-                    <input id="usernamefield" type="text" class="form-control paddown" name="username" value="test188">
-                    <%--<input type="text" class="form-control" name="username" placeholder="Username">--%>
+                    <input id="usernamefield" type="text" class="form-control paddown" name="username">
                 </div>
                 <br>
                 <div class="form-group paddown">
-                    <input id="passwordfield" type="password" class="form-control" name="password" value="longenoughpass11">
-                    <%--<input type="text" class="form-control" name="password" placeholder="Password">--%>
+                    <input id="passwordfield" type="password" class="form-control" name="password">
                 </div>
                 <br>
                 <div class="form-group paddown">
-                    <input id="emailholder" type="text" class="form-control floatright" name="email" value="test18@emailserver.com">
+                    <input id="emailholder" type="text" class="form-control floatright" name="email">
                 </div>
                 <br>
                 <div class="form-group paddown">

@@ -80,7 +80,7 @@ public class DataUtils {
         inputs.add(makeSampleInput(3, 0));
         inputs.add(makeSampleInput(3, 0));
 
-        for (int i = 0; i <500; i++) {
+        for (int i = 0; i <300; i++) {
             inputs.add(makeSampleInput(0, 0));
         }
 
@@ -223,25 +223,6 @@ public class DataUtils {
 
         Key test5key = datastore.put(user);
         users.add(test5key);
-
-        for (int i = 6; i < 125 ; i++) {
-            user = new Entity("user");
-            user.setProperty("name", "test" + i);
-            user.setProperty("app", appKey);
-            user.setProperty("admin", false);
-            user.setProperty("status", "start");
-            salt = SecurityUtils.getNewSalt();
-            user.setProperty("password", SecurityUtils.hash("pass", salt));
-            user.setProperty("salt", salt);
-            user.setProperty("life_time_credits", 1000);
-            user.setProperty("failed_login_attempts_today", 0);
-
-
-            users.add(datastore.put(user));
-        }
-
-
-
 
         return test5key;
 

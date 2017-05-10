@@ -30,8 +30,7 @@ public class UpdateCodeServlet extends HttpServlet {
 
     @Override
     protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // pre-flight request processing
-        if (req.getHeader("Origin").equals("http://localhost:8080") || req.getHeader("Origin").equals("https://vc-diss.appspot.com")) {
+        if (req.getHeader("Origin").equals("https://vc-diss.appspot.com")) {
             resp.setHeader("Access-Control-Allow-Origin", req.getHeader("Origin"));
         }
         resp.setHeader("Access-Control-Allow-Methods", "POST");
@@ -44,7 +43,7 @@ public class UpdateCodeServlet extends HttpServlet {
             throws IOException, ServletException {
 
         // pre-flight request processing
-        if (req.getHeader("Origin").equals("http://localhost:8080") || req.getHeader("Origin").equals("https://vc-diss.appspot.com")) {
+        if (req.getHeader("Origin").equals("https://vc-diss.appspot.com")) {
             resp.setHeader("Access-Control-Allow-Origin", req.getHeader("Origin"));
         }
 

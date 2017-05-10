@@ -79,7 +79,7 @@ public class RegisterServlet extends HttpServlet {
     private void sendVerificationEmail(String verificationCode, RegistrationRequest registrationRequest) throws MalformedURLException {
 
         String messageBody = "Hi, " + registrationRequest.getUsername() + ". \n \n Welcome to vc-diss, " +
-                "please click here to verify your email address: " + LiveUrlCreator.getLiveUrl("ops", "verifyEmail") + "?code=" + verificationCode + "" +
+                "please click here to verify your email address: " + LiveUrlCreator.getLiveUrl("ops", "verifyemail") + "?code=" + verificationCode + "" +
                 " \n \n Many thanks.";
 
 

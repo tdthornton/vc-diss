@@ -26,12 +26,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>serviceCatalogue</servlet-name>
+        <servlet-name>servicecatalogue</servlet-name>
         <servlet-class>com.appspot.vcdiss.utils.servlets.HelperServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>serviceCatalogue</servlet-name>
-        <url-pattern>/serviceCatalogue</url-pattern>
+        <servlet-name>servicecatalogue</servlet-name>
+        <url-pattern>/servicecatalogue</url-pattern>
     </servlet-mapping>
 
     <servlet>

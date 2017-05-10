@@ -13,15 +13,6 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>makeinputs</servlet-name>
-        <servlet-class>com.appspot.vcdiss.ops.adminhelpers.MakeInputsServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>makeinputs</servlet-name>
-        <url-pattern>/makeinputs</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>clearinputs</servlet-name>
         <servlet-class>com.appspot.vcdiss.ops.adminhelpers.ClearInputs</servlet-class>
     </servlet>
@@ -69,12 +60,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>verifyEmail</servlet-name>
+        <servlet-name>verifyemail</servlet-name>
         <servlet-class>com.appspot.vcdiss.ops.servlets.ConfirmEmailServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>verifyEmail</servlet-name>
-        <url-pattern>/verifyEmail</url-pattern>
+        <servlet-name>verifyemail</servlet-name>
+        <url-pattern>/verifyemail</url-pattern>
     </servlet-mapping>
 
     <servlet>
