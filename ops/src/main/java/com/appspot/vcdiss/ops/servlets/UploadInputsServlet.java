@@ -48,7 +48,7 @@ public class UploadInputsServlet extends HttpServlet {
             throws IOException, ServletException {
 
         // pre-flight request processing
-        if (req.getHeader("Origin").equals("https://vc-diss.appspot.com")) {
+        if (req.getHeader("Origin").equals("https://vc-diss.appspot.com") || req.getHeader("Origin").equals("https://1-dot-default-dot-vc-diss.appspot.com")) {
             resp.setHeader("Access-Control-Allow-Origin", req.getHeader("Origin"));
         }
 

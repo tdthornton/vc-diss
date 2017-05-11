@@ -27,7 +27,7 @@
         <form id="newpasswordform" class="form-inline" id="newpassword" action="/newpassword" method="post">
             <div id="formelementsholder">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="password">
+                    <input type="text" class="form-control" name="password" placeholder="New password">
                 </div>
                 <input type="hidden" class="form-control" name="code" value="${resetCode}">
 

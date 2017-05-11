@@ -27,7 +27,7 @@
         <form id="resetpasswordform" class="form-inline" id="resetpassword" action="/resetpassword" method="post">
             <div id="formelementsholder">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="email" value="${prefill_email}">
+                    <input type="text" class="form-control" name="email" value="${prefill_email}" placeholder="email">
                 </div>
 
                 <button type="submit" class="btn btn-default" value="Submit">Reset</button></div>
