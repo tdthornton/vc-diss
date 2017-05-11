@@ -1,4 +1,4 @@
-package com.appspot.vcdiss.utils;
+package com.appspot.vcdiss.statsout;
 
 import com.appspot.vcdiss.utils.servlets.UserViewServlet;
 import com.appspot.vcdiss.utils.test.DataUtils;
@@ -75,7 +75,7 @@ public class UserViewServletTest {
     public void testDoGet() throws IOException, ServletException {
 
         when(request.getParameter("username")).thenReturn("test1");
-        when(request.getParameter("password")).thenReturn("pass");
+        when(request.getParameter("password")).thenReturn("t3heqaNa");
 
         userViewServlet.doPost(request, mresponse);
 
@@ -113,7 +113,7 @@ public class UserViewServletTest {
     public void testDoGetWithStats() throws IOException, ServletException {
 
         when(request.getParameter("username")).thenReturn("test5");
-        when(request.getParameter("password")).thenReturn("pass");
+        when(request.getParameter("password")).thenReturn("t3heqaNa");
 
         userViewServlet.doPost(request, mresponse);
 
@@ -150,7 +150,7 @@ public class UserViewServletTest {
     public void testDoGetAdmin() throws IOException, ServletException {
 
         when(request.getParameter("username")).thenReturn("admin1");
-        when(request.getParameter("password")).thenReturn("pass");
+        when(request.getParameter("password")).thenReturn("t3heqaNa");
 
         userViewServlet.doPost(request, mresponse);
 
@@ -180,7 +180,7 @@ public class UserViewServletTest {
         DataUtils.clearApps();
 
         when(request.getParameter("username")).thenReturn("test1");
-        when(request.getParameter("password")).thenReturn("pass");
+        when(request.getParameter("password")).thenReturn("t3heqaNa");
 
         userViewServlet.doPost(request, mresponse);
         verify(mresponse).setStatus(404);

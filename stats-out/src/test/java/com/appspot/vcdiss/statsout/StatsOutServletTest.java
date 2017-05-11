@@ -1,5 +1,6 @@
-package com.appspot.vcdiss.utils;
+package com.appspot.vcdiss.statsout;
 
+import com.appspot.vcdiss.utils.MiscUtils;
 import com.appspot.vcdiss.utils.domain.Stat;
 import com.appspot.vcdiss.utils.security.Authoriser;
 import com.appspot.vcdiss.utils.security.Credentials;
@@ -69,7 +70,7 @@ public class StatsOutServletTest {
 
         Credentials credentials = new Credentials();
         credentials.setUsername("test1");
-        credentials.setPassword("pass");
+        credentials.setPassword("t3heqaNa");
 
         authoriser = new Authoriser(credentials).authorise();
 
