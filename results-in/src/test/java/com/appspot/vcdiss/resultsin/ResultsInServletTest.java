@@ -74,7 +74,7 @@ public class ResultsInServletTest {
 
         Credentials credentials = new Credentials();
         credentials.setUsername("test1");
-        credentials.setPassword("pass");
+        credentials.setPassword("t3heqaNa");
 
         authoriser = new Authoriser(credentials).authorise();
 
@@ -254,7 +254,7 @@ public class ResultsInServletTest {
     private void postBasicInput(TestInboundResult result, int expectedStatusCode, Entity user) throws IOException {
         Credentials creds = new Credentials();
         creds.setUsername((String) user.getProperty("name"));
-        creds.setPassword("pass");
+        creds.setPassword("t3heqaNa");
 
         authoriser = new Authoriser(creds).authorise();
         postBasicInput(result, authoriser.getToken(), expectedStatusCode);

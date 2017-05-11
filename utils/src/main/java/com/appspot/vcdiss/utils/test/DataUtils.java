@@ -144,7 +144,7 @@ public class DataUtils {
         user.setProperty("status", "start");
         user.setProperty("email_verified", false);
         String salt = SecurityUtils.getNewSalt();
-        user.setProperty("password", SecurityUtils.hash("pass", salt));
+        user.setProperty("password", SecurityUtils.hash("t3heqaNa", salt));
         user.setProperty("salt", salt);
         user.setProperty("email", "test@localtest.org");
         user.setProperty("failed_login_attempts_today", 0);
@@ -159,7 +159,7 @@ public class DataUtils {
         user.setProperty("admin", false);
         user.setProperty("status", "start");
         salt = SecurityUtils.getNewSalt();
-        user.setProperty("password", SecurityUtils.hash("pass", salt));
+        user.setProperty("password", SecurityUtils.hash("t3heqaNa", salt));
         user.setProperty("salt", salt);
         user.setProperty("life_time_credits", 1000);
         user.setProperty("failed_login_attempts_today", 0);
@@ -173,7 +173,7 @@ public class DataUtils {
         user.setProperty("admin", false);
         user.setProperty("status", "start");
         salt = SecurityUtils.getNewSalt();
-        user.setProperty("password", SecurityUtils.hash("pass", salt));
+        user.setProperty("password", SecurityUtils.hash("t3heqaNa", salt));
         user.setProperty("salt", salt);
         user.setProperty("life_time_credits", 1000);
         user.setProperty("failed_login_attempts_today", 0);
@@ -187,7 +187,7 @@ public class DataUtils {
         user.setProperty("admin", false);
         user.setProperty("status", "start");
         salt = SecurityUtils.getNewSalt();
-        user.setProperty("password", SecurityUtils.hash("pass", salt));
+        user.setProperty("password", SecurityUtils.hash("t3heqaNa", salt));
         user.setProperty("salt", salt);
         user.setProperty("life_time_credits", 1000);
         user.setProperty("failed_login_attempts_today", 0);
@@ -197,11 +197,13 @@ public class DataUtils {
 
         user = new Entity("user");
         user.setProperty("name", "admin1");
+        user.setProperty("email", "vcdissowner@gmail.com");
+        user.setProperty("email_verified", true);
         user.setProperty("app", appKey);
         user.setProperty("admin", true);
         user.setProperty("status", "start");
         salt = SecurityUtils.getNewSalt();
-        user.setProperty("password", SecurityUtils.hash("pass", salt));
+        user.setProperty("password", SecurityUtils.hash("t3heqaNa", salt));
         user.setProperty("salt", salt);
         user.setProperty("life_time_credits", 1000);
         user.setProperty("failed_login_attempts_today", 0);
@@ -215,7 +217,7 @@ public class DataUtils {
         user.setProperty("admin", false);
         user.setProperty("status", "start");
         salt = SecurityUtils.getNewSalt();
-        user.setProperty("password", SecurityUtils.hash("pass", salt));
+        user.setProperty("password", SecurityUtils.hash("t3heqaNa", salt));
         user.setProperty("salt", salt);
         user.setProperty("life_time_credits", 1000);
         user.setProperty("failed_login_attempts_today", 0);

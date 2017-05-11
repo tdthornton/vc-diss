@@ -75,7 +75,7 @@ public class ToggleUserStatusServletTest {
 
         Credentials credentials = new Credentials();
         credentials.setUsername("test1");
-        credentials.setPassword("pass");
+        credentials.setPassword("t3heqaNa");
 
         authoriser = new Authoriser(credentials).authorise();
 
@@ -157,7 +157,7 @@ public class ToggleUserStatusServletTest {
 
         Credentials credentials = new Credentials();
         credentials.setUsername((String) user.getProperty("name"));
-        credentials.setPassword("pass");
+        credentials.setPassword("t3heqaNa");
 
         authoriser = new Authoriser(credentials).authorise();
 
@@ -189,7 +189,7 @@ public class ToggleUserStatusServletTest {
 
         Credentials credentials = new Credentials();
         credentials.setUsername((String) user.getProperty("name"));
-        credentials.setPassword("pass");
+        credentials.setPassword("t3heqaNa");
 
         authoriser = new Authoriser(credentials).authorise();
 

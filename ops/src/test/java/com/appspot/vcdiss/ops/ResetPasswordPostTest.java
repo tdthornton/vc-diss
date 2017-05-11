@@ -79,7 +79,7 @@ public class ResetPasswordPostTest {
 
         Credentials credentials = new Credentials();
         credentials.setUsername("test1");
-        credentials.setPassword("pass");
+        credentials.setPassword("t3heqaNa");
 
         authoriser = new Authoriser(credentials).authorise();
 

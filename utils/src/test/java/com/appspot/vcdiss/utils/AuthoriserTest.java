@@ -49,7 +49,7 @@ public class AuthoriserTest {
 
         Credentials credentials = new Credentials();
         credentials.setUsername("test1");
-        credentials.setPassword("pass");
+        credentials.setPassword("t3heqaNa");
 
         authoriser = new Authoriser(credentials).authorise();
 
@@ -91,7 +91,7 @@ public class AuthoriserTest {
 
         Credentials goodCredentialsButLockedByNow = new Credentials();
         badCredentials.setUsername("test1");
-        badCredentials.setPassword("pass");
+        badCredentials.setPassword("t3heqaNa");
 
         authoriser = new Authoriser(goodCredentialsButLockedByNow).authorise();
         Assert.assertFalse(authoriser.wasSuccessful());
@@ -105,7 +105,7 @@ public class AuthoriserTest {
 
         Credentials credentials = new Credentials();
         credentials.setUsername("test1");
-        credentials.setPassword("pass");
+        credentials.setPassword("t3heqaNa");
 
         authoriser = new Authoriser(credentials).authorise();
 
@@ -118,7 +118,7 @@ public class AuthoriserTest {
 
         Credentials credentials = new Credentials();
         credentials.setUsername("test1");
-        credentials.setPassword("pass");
+        credentials.setPassword("t3heqaNa");
 
         authoriser = new Authoriser(credentials).authorise();
 

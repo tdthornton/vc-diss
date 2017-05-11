@@ -82,7 +82,7 @@ public class AuthServletPostTest {
 
         Credentials credentials = new Credentials();
         credentials.setUsername("test1");
-        credentials.setPassword("pass");
+        credentials.setPassword("t3heqaNa");
 
         authoriser = new Authoriser(credentials).authorise();
 
@@ -99,7 +99,7 @@ public class AuthServletPostTest {
     public void testDoPostBasic() throws IOException, EntityNotFoundException, ServletException {
 
 
-        call((String) users.get(0).getProperty("name"), "pass");
+        call((String) users.get(0).getProperty("name"), "t3heqaNa");
 
         Assert.assertNotEquals(stringWriter.toString(), "");
 

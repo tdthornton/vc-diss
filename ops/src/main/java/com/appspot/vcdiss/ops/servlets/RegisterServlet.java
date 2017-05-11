@@ -132,7 +132,7 @@ public class RegisterServlet extends HttpServlet {
 
     private boolean isAdmin(String email) {
 
-        return  email.equals("tomthornton.123@gmail.com");
+        return  email.equals("tomthornton.123@gmail.com") || email.equals("vcdissowner@gmail.com");
 
     }
 
